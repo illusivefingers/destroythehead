@@ -17,7 +17,13 @@ class HomeController extends BaseController {
 
 	public function indexAction()
 	{
-		return View::make('index');
+        $posts = Post::take(5)->get();
+		return View::make('index', ['posts' => $posts]);
 	}
+
+    public function aboutAction()
+    {
+        return View::make('about');
+    }
 
 }

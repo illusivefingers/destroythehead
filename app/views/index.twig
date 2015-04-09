@@ -1,7 +1,16 @@
 {% extends 'base.twig' %}
 
+{% block title %}
+    Destroy the Head
+{% endblock %}
+
 {% block body %}
-	<div class="container">
-		index
-	</div>
+    {% for post in posts %}
+        <div class="row">
+            <p class="text-center col-md-offset-3 col-md-6">
+                {{ post.description }}
+                <a href="/post/{{ post.slug }}">Read more...</a>
+            </p>
+        </div>
+    {% endfor %}
 {% endblock %}

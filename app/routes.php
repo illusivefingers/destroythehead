@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'HomeController@indexAction');
+Route::get('/about', 'HomeController@aboutAction');
+
+Route::get('/post', 'PostsController@indexAction');
+Route::get('/post/{slug}', 'PostsController@showAction');
